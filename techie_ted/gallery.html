@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno D'Agostino's Links</title>
+    <title>Techie Ted Image Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -22,28 +22,28 @@
             position: relative;
         }
 
-        .profile-container {
+        .container {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             width: 90%;
-            max-width: 400px;
+            max-width: 800px;
             text-align: center;
             backdrop-filter: blur(10px);
             padding: 20px;
             margin: 20px 0;
         }
 
-        .profile-header {
-            background-image: url('');
+        .header {
+            background-image: url('images/gallery-bg.jpg');
             background-size: cover;
             background-position: center;
             padding: 40px 20px;
             position: relative;
         }
 
-        .profile-header::after {
+        .header::after {
             content: '';
             position: absolute;
             top: 0;
@@ -54,7 +54,7 @@
             border-radius: 15px 15px 0 0;
         }
 
-        .profile-header img {
+        .header img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -64,57 +64,85 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .profile-header img:hover {
+        .header img:hover {
             transform: scale(1.1);
         }
 
-        .profile-content {
+        .content {
             padding: 20px;
             position: relative;
             z-index: 1;
         }
 
-        .profile-content h1 {
+        .content h1 {
             margin: 10px 0 5px;
             font-size: 24px;
             color: #fff;
             z-index: 1;
         }
 
-        .profile-content p {
+        .content p {
             margin: 0;
             color: #ddd;
             z-index: 1;
         }
 
-        .badge-container {
-            margin: 20px 0;
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .badge-base {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            background-color: #fff;
+        .section {
+            width: calc(33.333% - 40px);
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            margin: 10px 0;
-            text-decoration: none;
-            color: #333;
-            transition: background-color 0.3s, transform 0.3s;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 16px;
+            margin: 0 0 10px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .section a {
+            color: #6e8efb;
+            text-decoration: none;
+            font-size: 16px;
             font-weight: bold;
         }
 
-        .badge-base:hover {
-            background-color: #f0f0f0;
-            transform: scale(1.05);
+        .section a:hover {
+            color: #a777e3;
         }
 
-        .badge-base img,
-        .badge-base i {
-            margin-right: 10px;
-            font-size: 24px;
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #a777e3;
         }
 
         #particles-js {
@@ -125,60 +153,60 @@
             z-index: -1;
         }
 
+        @media (max-width: 900px) {
+            .section {
+                width: calc(50% - 40px);
+            }
+        }
+
         @media (max-width: 600px) {
-            .profile-header {
+            .header {
                 padding: 20px 10px;
             }
 
-            .profile-header img {
+            .header img {
                 width: 80px;
                 height: 80px;
             }
 
-            .profile-content h1 {
+            .content h1 {
                 font-size: 20px;
             }
 
-            .profile-content p {
-                white-space: normal;
+            .section {
+                width: calc(100% - 40px);
             }
         }
     </style>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 
 <body>
     <div id="particles-js"></div>
-    <div class="profile-container">
-        <div class="profile-header">
-            <img src="images/profile_picture.jpeg" alt="Bruno D'Agostino">
+    <div class="container">
+        <div class="header">
+            <img src="./images/techie_ted.jpeg" alt="Techie Ted">
         </div>
-        <div class="profile-content">
-            <h1>Bruno D'Agostino</h1>
-            <p>Software Engineer for Oracle, based in London.</p>
-        </div>
-        <div class="badge-container">
-            <a href="https://www.linkedin.com/in/brunodagostinoo" class="badge-base">
-                <i class="fab fa-linkedin"></i> My LinkedIn
-            </a>
-            <a href="https://instagram.com/brunodagostinoo" class="badge-base">
-                <i class="fab fa-instagram"></i> My Instagram
-            </a>
-            <a href="https://threads.net/@brunodagostinoo" class="badge-base">
-                <i class="fab fa-threads"></i> My Threads
-            </a>
-            <a href="https://meta.com/quest/brunodagostinoo" class="badge-base">
-                <i class="fab fa-meta"></i> My Meta Quest
-            </a>
-            <a href="https://github.com/brunodagostinoo" class="badge-base">
-                <i class="fab fa-github"></i> My GitHub
-            </a>
-            <a href="https://spotify.com/brunodagostinoo" class="badge-base">
-                <i class="fab fa-spotify"></i> My Spotify
-            </a>
-            <a href="./techie_ted/techie-ted.html" class="badge-base">
-                <i class="fas fa-robot"></i> Meet Techie Ted
-            </a>
+        <div class="content">
+            <h1>Techie Ted Image Gallery</h1>
+            <p>Explore the gallery of creations by Techie Ted.</p>
+            <div class="sections">
+                <div class="section">
+                    <h2>Image Collection 1</h2>
+                    <p>Topic: AI Art</p>
+                    <a href="./image_collections/image-collection-1.html">View Images</a>
+                </div>
+                <div class="section">
+                    <h2>Image Collection 2</h2>
+                    <p>Topic: Landscapes</p>
+                    <a href="#">View Images</a>
+                </div>
+                <div class="section">
+                    <h2>Image Collection 3</h2>
+                    <p>Topic: Abstract</p>
+                    <a href="#">View Images</a>
+                </div>
+            </div>
+            <a href="./techie-ted.html" class="back-link">Back to Techie Ted</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
